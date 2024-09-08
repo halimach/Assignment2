@@ -35,6 +35,10 @@ class MainActivity : AppCompatActivity() {
             loginButton.isEnabled = false
             val intent = Intent(this, Dashboard::class.java)
             startActivity(intent)
+            //Pass the username & password with intent
+            intent.putExtra("USERNAME", username)
+            intent.putExtra("PASSWORD", password)
+
         }
 
         //Make the POST Request
